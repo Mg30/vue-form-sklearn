@@ -1,0 +1,16 @@
+name: "vue form sklearn"
+description: "Build a vue.js app based on a forml.yml file"
+inputs:
+  endpoint:
+    description: The url of the endpoint
+    required: true
+
+outputs:
+  endpoint:
+    description: "The http endpoint where the model is deployed"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{inputs.endpoint}}
+
