@@ -3,5 +3,5 @@ export API_ENDPOINT=$INPUT_ENDPOINT
 cp form.yml /form.yml
 python3 /script.py
 cd /app
-npm build
+npm run build
 cp -r /app/dist /dist
