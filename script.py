@@ -82,8 +82,6 @@ def template_webapp(config:Dict):
 
 
 if __name__ == "__main__":
-
-    os.environ["VUE_APP_GITHUB_PAGE"] = 
     with open("/form.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
         template_webapp(config)
