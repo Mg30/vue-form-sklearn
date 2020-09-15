@@ -72,11 +72,11 @@ def template_webapp(config:Dict):
     templater = DefaultTemplater("/template/vue.config.js", "/app/src/vue.config.js")
     owner_repo = os.getenv("GITHUB_REPOSITORY")
     repo = owner_repo.split("/")[-1]
-    tag = {"ghpages": f"/{repo}/"}
+    tag = {"ghpages": f"'/{repo}/'"}
     templater.render(tag)
 
     templater = DefaultTemplater("/template/main.js", "/app/src/main.js")
-    tag = {"endpoint": os.getenv("INPUT_ENDPOINT")}
+    tag = {"endpoint": f"'{os.getenv('INPUT_ENDPOINT')'"}
     templater.render(tag)
 
 
