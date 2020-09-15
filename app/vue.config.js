@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? process.env.GITHUB_PAGE
+    ? process.env.VUE_APP_GITHUB_PAGE
     : '/',
   transpileDependencies: [
     'vuetify'

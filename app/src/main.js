@@ -6,7 +6,7 @@ import vuetify from './plugins/vuetify'
 import VueFormGenerator from 'vue-form-generator'
 import 'vue-form-generator/dist/vfg.css'
 import axios from 'axios'
-axios.defaults.baseURL = process.env.API_ENDPOINT
+axios.defaults.baseURL = process.env.VUE_APP_BASE_URL
 
 Vue.use(VueFormGenerator)
 

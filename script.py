@@ -73,7 +73,7 @@ def template_webapp(config:Dict):
 if __name__ == "__main__":
     owner_repo = os.getenv("REPO")
     repo = owner_repo.split("/")[-1]
-    os.environ["GITHUB_PAGE"] = f"/{repo}/"
+    os.environ["VUE_APP_GITHUB_PAGE"] = f"/{repo}/"
     with open("/form.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
         template_webapp(config)
