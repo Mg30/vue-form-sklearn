@@ -76,7 +76,8 @@ def template_webapp(config:Dict):
     templater.render(tag)
 
     templater = DefaultTemplater("/template/main.js", "/app/src/main.js")
-    tag = {"endpoint": f"'{os.getenv('INPUT_ENDPOINT')'"}
+    endpoint = os.getenv('INPUT_ENDPOINT')
+    tag = {"endpoint": f"'{endpoint}'"}
     templater.render(tag)
 
 
